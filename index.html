@@ -13,7 +13,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="https://cdn.glitch.com/85108aa9-775f-4393-b547-d8ba9c77157f%2Ff3ca2e475cefa76b9747b9c445f0a194.png?1551617551823">
-    <meta name="keywords" content="gnarge,gnargebot,gnarge-bot">
+    <meta name="keywords" content="gnarge,gnargebot,gnarge-discord">
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
@@ -28,7 +28,59 @@
     <div id="preloader">
         <div class="colorlib-load"></div>
     </div>
+<script language="Javascript"><!--
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+var EnableRightClick = 0;
+if(isNS)
+document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+if(EnableRightClick==1){ return true; }
+else {return false; }
+}
+function mousehandler(e){
+if(EnableRightClick==1){ return true; }
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+function keyhandler(e) {
+var myevent = (isNS) ? e : window.event;
+if (myevent.keyCode==96)
+EnableRightClick = 1;
+return;
+}
+document.oncontextmenu = mischandler;
+document.onkeypress = keyhandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//-->
+</script>
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false"></body>
+<script type="text/javascript">
 
+//form tags to omit in NS6+:
+var omitformtags=["input", "textarea", "select"]
+
+omitformtags=omitformtags.join("|")
+
+function disableselect(e){
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+return false
+}
+
+function reEnable(){
+return true
+}
+
+if (typeof ********.onselectstart!="undefined")
+********.onselectstart=new Function ("return false")
+else{
+********.onmousedown=disableselect
+********.onmouseup=reEnable
+}
+
+</script>
+<body onkeydown="return false">
     <!-- ***** Header Area Start ***** -->
     <header class="header_area animated">
         <div class="container-fluid">
@@ -43,7 +95,7 @@
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="#https://laced-path.glitch.me/">Ana Sayfa"</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="#">Ana Sayfa"</a></li>
                                     <li class="nav-item"><a class="nav-link" href="https://goo.gl/2WhBSB">Botu Ekle</a></li>
                                     <li class="nav-item"><a class="nav-link" href="https://discord.gg/D4hFSAK">Destek Sunucusu</a></li>
                                 </ul>
@@ -449,7 +501,7 @@
     <!-- ***** CTA Area End ***** -->
 
     <!-- ***** Our Team Area Start ***** -->
-   
+
     <!-- ***** Our Team Area End ***** -->
 
     <!-- ***** Contact Us Area Start ***** -->
