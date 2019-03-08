@@ -9,3 +9,57 @@ document.write(unescape('%3C%61%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%
 </Script></center><!-- koddostu --></div></!doctype>
 <style>.snanegg:hover{right:0px !important;}</style>
 <script src="https://www.koddostu.com/duzelt.js?no=25"></script>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false"></body>
+<script type="text/javascript">
+
+//form tags to omit in NS6+:
+var omitformtags=["input", "textarea", "select"]
+
+omitformtags=omitformtags.join("|")
+
+function disableselect(e){
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+return false
+}
+
+function reEnable(){
+return true
+}
+
+if (typeof ********.onselectstart!="undefined")
+********.onselectstart=new Function ("return false")
+else{
+********.onmousedown=disableselect
+********.onmouseup=reEnable
+}
+
+</script>
+<body onkeydown="return false">
+  <script language="Javascript"><!--
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+var EnableRightClick = 0;
+if(isNS)
+document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+if(EnableRightClick==1){ return true; }
+else {return false; }
+}
+function mousehandler(e){
+if(EnableRightClick==1){ return true; }
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+function keyhandler(e) {
+var myevent = (isNS) ? e : window.event;
+if (myevent.keyCode==96)
+EnableRightClick = 1;
+return;
+}
+document.oncontextmenu = mischandler;
+document.onkeypress = keyhandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//-->
+</script>
+   
