@@ -3,9 +3,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="https://bot.eggsybot.xyz/pub/img/fav.ico">
+      <link rel="icon" href="https://cdn.glitch.com/85108aa9-775f-4393-b547-d8ba9c77157f%2Ff3ca2e475cefa76b9747b9c445f0a194.png?1551617551823">
     <meta name="author" content="cross%#8713">
-    <meta name="keywords" content="eggsy,eggsys,discord,bot,eggsybot">
+    <meta name="keywords" content="gnarge,gnargebot">
     <meta property="og:site_name" value="Gnarge Bot | Komutlar" />
     <meta property="og:image" content="" />
     <meta name="theme-color" content="#6355e8" />
@@ -30,14 +30,11 @@
     <header id="header" id="home">
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
-                <div id="logo">
-                    <a href="https://gnargebot.glitch.me/"><img src="https://bot.eggsybot.xyz/pub/img/logo.png" alt="" title="" /></a>
-                </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="https://gnargebot.glitch.me/">Ana Sayfa</a></li>
-                        <li><a href="https://gnargebot.glitch.me/komutlar">Komutlar</a></li>
-                        <li><a href="https://gnargebot.glitch.me/davet">Ekle</a></li>
+                        <li><a self="https://gnargebot.glitch.me/komutlar">Komutlar</a></li>
+                        <li><a self="https://gnargebot.glitch.me/davet">Ekle</a></li>
                     </ul>
                 </nav>
             </div>
@@ -60,8 +57,7 @@
                         <li class="tab-link" data-tab="tab-2">Kullanıcı</li>
                         <li class="tab-link" data-tab="tab-3">Yetkili</li>
                         <li class="tab-link" data-tab="tab-4">Ekstra</li>
-                        <li class="tab-link" data-tab="tab-5">Ücretli</li>
-                        <li data-tab="unclickable">Prefix: !!</li>
+                        <li data-tab="unclickable">Prefix: g!</li>
                     </ul>
                 </div>
             </div>
@@ -1220,4 +1216,49 @@ Yazdığınız Mesajı Bot Size Ses Kanalında İletir
 
  
 
+ <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> Tasarım <a href="https://colorlib.com" target="_blank"><i
+                            class="fa fa-heart-o" aria-hidden="true"></i>
+                        Colorlib</a> tarafından yapılmış, cross%#8713 tarafından düzenlenmiştir. <a href="https://bot.eggsybot.xyz/tos"><i>(ToS)</i></a>
+                    <!-- Colorlib tasarımları CC BY 3.0. lisansı ile lisanslanmıştır. Buradaki linki kaldıramazsınız! (EGGSY) -->
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="https://twitter.com/gnargebot" target="_blank"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="https://bot.eggsybot.xyz/pub/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/vendor/bootstrap.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/easing.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/hoverIntent.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/superfish.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/jquery.ajaxchimp.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/owl.carousel.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/hexagons.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/jquery.nice-select.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/jquery.counterup.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/waypoints.min.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/main.js"></script>
+    <script src="https://bot.eggsybot.xyz/pub/js/custom.js"></script>
+    <script>
+        $('ul.tabs li').click(function () {
+            var tab_id = $(this).attr('data-tab');
+            if (tab_id == "unclickable") return;
+
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('current');
+            $("#" + tab_id).addClass('current');
+        });
+    </script>
+</body>
+
+</html>
